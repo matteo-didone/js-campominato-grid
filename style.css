@@ -26,6 +26,8 @@ ul
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
 }
 
 .header-left
@@ -45,7 +47,7 @@ ul
 {
     background-color: aquamarine;
     width: 100%;
-    height: 800px;
+    flex-grow: 1;
 }
 
 #btn-play
@@ -59,4 +61,31 @@ ul
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    height: 40px; 
+    margin-top: 20px;
+}
+
+.grid
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.row
+{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.cell
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 78px;
+    border: 1px solid black;    
 }
