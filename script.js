@@ -18,6 +18,7 @@ playButton.addEventListener('click', function()
     // The selected option is stored into a JS variable
     const selectedOption = document.getElementById('difficulty-selector').value;
     // Extract the number from the option value
+    // I'm using a regular expression to find the number inside the option value 
     const difficultyLevel = parseInt(selectedOption.match(/\d+/)[0]);
 
     // Generate the game grid based on the selected difficulty level
