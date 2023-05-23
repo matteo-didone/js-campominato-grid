@@ -11,19 +11,15 @@
 
 // The play button is stored into a JS variable
 const playButton = document.getElementById('btn-play');
-// The selector is stored into a JS variable
-const selector = document.getElementById('difficulty');
-// The difficulty options need to be stored into a JS variable too
-const difficultyOne = document.getElementById('difficulty-one');
-const difficultyTwo = document.getElementById('difficulty-two');
-const difficultyThree = document.getElementById('difficulty-three');
 
 // Add click event listener to the play button
 playButton.addEventListener('click', function() 
 {
-    // Get the selected difficulty level
-    const difficultyString = selector.value;
-    const difficultyLevel = parseInt(difficultyString.match(/\d+/) || 0);;
+    // The selected option is stored into a JS variable
+    const selectedOption = document.getElementById('difficulty-selector').value;
+
+    // Extract the number from the option value
+    const difficultyLevel = parseInt(selectedOption.match(/\d+/)[0]);
 
     // Generate the game grid based on the selected difficulty level
     generateGrid(difficultyLevel);
