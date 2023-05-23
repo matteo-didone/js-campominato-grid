@@ -46,7 +46,7 @@ function generateGrid()
             cell.addEventListener('click', function() 
             {
                 // Add 'clicked' class to the cell
-                cell.classList.add('clicked');
+                cell.classList.toggle('clicked');
                 // Print the clicked cell text to the console
                 console.log(cell.innerText);
             });
