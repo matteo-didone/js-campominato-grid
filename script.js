@@ -1,12 +1,20 @@
 // The user clicks on the button "Play"
+//That will generate a square game grid
+//Each cell has a progressive number from 1 to 100
+//There will be 10 cells for each of the 10 rows
+//When the user clicks on each cell, the clicked cell turns blue, and a message is emitted in the console with the number of the clicked cell. 
+
+// The play button is stored into a JS variable
 const playButton = document.getElementById('btn-play');
 
+// Add click event listener to the play button
 playButton.addEventListener('click', function() 
 {
     // The game grid is generated
     generateGrid();
 });
 
+// Game grid function method
 function generateGrid() 
 {
     // The game grid is generated
@@ -50,7 +58,3 @@ function generateGrid()
 }
 
 
-//That will generate a square game grid
-//Each cell has a progressive number from 1 to 100
-//There will be 10 cells for each of the 10 rows
-//When the user clicks on each cell, the clicked cell turns blue, and a message is emitted in the console with the number of the clicked cell.
