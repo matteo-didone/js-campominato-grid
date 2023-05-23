@@ -40,7 +40,8 @@ ul
 .header-right
 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mined-field
@@ -57,6 +58,11 @@ ul
 {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+#difficulty-selector
+{
+    margin-left: 20px;
 }
 
 .footer
