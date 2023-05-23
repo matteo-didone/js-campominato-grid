@@ -17,7 +17,6 @@ playButton.addEventListener('click', function()
 {
     // The selected option is stored into a JS variable
     const selectedOption = document.getElementById('difficulty-selector').value;
-
     // Extract the number from the option value
     const difficultyLevel = parseInt(selectedOption.match(/\d+/)[0]);
 
