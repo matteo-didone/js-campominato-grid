@@ -12,6 +12,9 @@
 // The play button is stored into a JS variable
 const playButton = document.getElementById('btn-play');
 
+// Keep track of whether the grid is currently visible or not
+let isGridVisible = false;
+
 // Add click event listener to the play button
 playButton.addEventListener('click', function() 
 {
@@ -21,8 +24,19 @@ playButton.addEventListener('click', function()
     // I'm using a regular expression to find the number inside the option value 
     const difficultyLevel = parseInt(selectedOption.match(/\d+/)[0]);
 
-    // Generate the game grid based on the selected difficulty level
-    generateGrid(difficultyLevel);
+    // Toggle grid visibility
+    isGridVisible = !isGridVisible;
+
+    if (isGridVisible) 
+    {
+        // Generate the game grid based on the selected difficulty level
+        generateGrid(difficultyLevel);
+    } 
+    else 
+    {
+        // Clear the grid
+        clearGrid();
+    }
 });
 
 // Game grid function method
@@ -87,4 +101,11 @@ function generateGrid(difficultyLevel)
         // Append the row to the grid
         grid.appendChild(row);
     }
+}
+
+// Clear the grid
+function clearGrid() 
+{
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
 }
